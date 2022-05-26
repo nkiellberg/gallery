@@ -320,7 +320,7 @@ class SettingsAbout extends StatelessWidget {
   Widget build(BuildContext context) {
     return _SettingsLink(
       title: GalleryLocalizations.of(context)!.settingsAbout,
-      icon: Icons.info_outline,
+      icon: Icons.accessible_forward_outlined,
       onTap: () {
         about.showAboutDialog(context: context);
       },
