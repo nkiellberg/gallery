@@ -192,7 +192,7 @@ class HomePage extends StatelessWidget {
                   Container(
                     child: Center(
                       child: Text(
-                         'JEG',
+                         'YOU',
                         style: TextStyle(color: Colors.red, fontSize: 100),
                       )
                     ),
@@ -202,7 +202,7 @@ class HomePage extends StatelessWidget {
                   Container(
                       child: Center(
                           child: Text(
-                            'ER',
+                            'ARE',
                             style: TextStyle(color: Colors.red, fontSize: 100),
                           )
                       ),
@@ -212,7 +212,7 @@ class HomePage extends StatelessWidget {
                   Container(
                       child: Center(
                           child: Text(
-                            'TOAST',
+                            'KING',
                             style: TextStyle(color: Colors.red, fontSize: 100),
                           )
                       ),
