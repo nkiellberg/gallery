@@ -172,6 +172,59 @@ class HomePage extends StatelessWidget {
             top: isDesktop ? firstHeaderDesktopTopPadding : 21,
           ),
           children: [
+
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: _horizontalDesktopPadding,
+              ),
+              child: _CategoriesHeader(),
+            ),
+            Container(
+              height: 585,
+              color: Colors.red,
+              padding: const EdgeInsets.symmetric(
+                horizontal: _horizontalDesktopPadding,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: spaceBetween(48, [
+                  Container(
+                    child: Center(
+                      child: Text(
+                         'JEG',
+                        style: TextStyle(color: Colors.red, fontSize: 100),
+                      )
+                    ),
+                    height: 800,
+                    color: Colors.black,
+                  ),
+                  Container(
+                      child: Center(
+                          child: Text(
+                            'ER',
+                            style: TextStyle(color: Colors.red, fontSize: 100),
+                          )
+                      ),
+                    height: 400,
+                    color: Colors.green
+                  ),
+                  Container(
+                      child: Center(
+                          child: Text(
+                            'TOAST',
+                            style: TextStyle(color: Colors.red, fontSize: 100),
+                          )
+                      ),
+                      height: 565,
+                      color: Colors.orange
+                  ),
+                ]),
+              ),
+            ),
+
+
+
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: _horizontalDesktopPadding,
@@ -279,7 +332,8 @@ class _GalleryHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Header(
       color: Theme.of(context).colorScheme.primaryContainer,
-      text: GalleryLocalizations.of(context)!.homeHeaderGallery,
+      // text: GalleryLocalizations.of(context)!.homeHeaderGallery,
+      text: 'KIELLBERG',
     );
   }
 }

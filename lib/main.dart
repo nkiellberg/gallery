@@ -55,7 +55,7 @@ class GalleryApp extends StatelessWidget {
             scrollBehavior:
                 const MaterialScrollBehavior().copyWith(scrollbars: false),
             restorationScopeId: 'rootGallery',
-            title: 'Flutter Gallery',
+            title: 'KIELLBERG',
             debugShowCheckedModeBanner: false,
             themeMode: options.themeMode,
             theme: GalleryThemeData.lightThemeData.copyWith(
@@ -93,6 +93,7 @@ class RootPage extends StatelessWidget {
     return const ApplyTextOptions(
       child: SplashPage(
         child: Backdrop(),
+        // child: Text('data'),
       ),
     );
   }

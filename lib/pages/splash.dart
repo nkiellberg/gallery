@@ -211,14 +211,47 @@ class _SplashBackLayer extends StatelessWidget {
     if (isSplashCollapsed) {
       if (isDisplayDesktop(context)) {
         child = Padding(
-          padding: const EdgeInsets.only(top: 50),
+          padding: const EdgeInsets.only(top: 0, left: 20),
           child: Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.topLeft,
             child: MouseRegion(
               cursor: SystemMouseCursors.click,
               child: GestureDetector(
                 onTap: onTap,
-                child: flutterLogo,
+                // child: flutterLogo,
+                child: Container(
+                  alignment: Alignment.topLeft,
+                  // color: Colors.red,
+                  width: 140,
+                  height: 140,
+                  child: Stack(
+                    children: [
+                      Center(
+                        child: Image.asset(
+                          effectAsset,
+                          // height: 200,
+                          // width: 200,
+                          package: 'flutter_gallery_assets',
+                        ),
+                      ),
+                      // Center(child: flutterLogo),
+                      // Center(
+                      //     child: Text('KIELLBERG',
+                      Center(
+                        // padding: const EdgeInsets.only(top: 20),
+                        child: Text(
+                          'KIELLBERG',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.white),
+                          )
+                      )
+                      // ),
+                    ],
+                  ),
+                )
+                // child: Text('TEST', style: Theme.of(context).textTheme.headline4),
               ),
             ),
           ),
@@ -253,7 +286,25 @@ class _SplashBackLayer extends StatelessWidget {
               package: 'flutter_gallery_assets',
             ),
           ),
-          Center(child: flutterLogo),
+          // Center(child: flutterLogo),
+          Center(
+              child: Text(
+                'KIELLBERG',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50
+                ),
+              )
+          ),
+          // Align(
+          //   // alignment: Alignment.bottomRight,
+          //   child: Container(
+          //     alignment: Alignment.bottomRight,
+          //     width: 150,
+          //     height: 150,
+          //     color: Colors.red,
+          //   )
+          // )
         ],
       );
     }
@@ -262,6 +313,7 @@ class _SplashBackLayer extends StatelessWidget {
       child: Material(
         // This is the background color of the gifs.
         color: const Color(0xFF030303),
+        // color: const Color(0xFE789789),
         child: Padding(
           padding: EdgeInsets.only(
             bottom: isDisplayDesktop(context)
